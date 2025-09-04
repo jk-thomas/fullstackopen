@@ -6,15 +6,29 @@ const Header = ({ course }) => {
   )
 }
 
+const Part = ({ name, ex }) => {
+  return (
+    <p>
+      {name} {ex}
+    </p>
+  )
+}
+
 const Content = ({ parts }) => {
   return (
     <div>
-      {parts.map((part, index) => (
-        <p key={index}>
-          {part.name} {part.ex}
-        </p>
-      ))}
+      <Part name={parts[0].name} ex={parts[0].ex} />
+      <Part name={parts[1].name} ex={parts[1].ex} />
+      <Part name={parts[2].name} ex={parts[2].ex} />
     </div>
+
+    // <div>
+    //   {parts.map((part, index) => (
+    //     <p key={index}>
+    //       {part.name} {part.ex}
+    //     </p>
+    //   ))}
+    // </div>
 
     // <div>
     //   <p>
